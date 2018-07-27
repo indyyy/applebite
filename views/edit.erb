@@ -1,0 +1,53 @@
+<h1> edit posting </h1>
+
+<form action = "/category/<%= @adpost.category+'/'+@adpost.id.to_s %>" method = "post">
+<input type = "hidden" name="_method" value="put">
+
+  
+  <button>Update Ad Post</button>
+  </form>
+
+
+  <label for ="">category</label><br>
+  <input type = "radio" name="category" value="<%=@adpost.category%>" checked><%=@adpost.category%><br>
+
+<input type = "radio" name="category" value="iPhone" >iPhone<br>
+  <input type = "radio" name="category" value="iPad">iPad<br>
+  <input type = "radio" name="category" value="Mac">Mac<br>
+  <input type = "radio" name="category" value="other">other<br>
+
+
+
+  
+  <label for=""> title</label>
+  <input type = "text" name ="title" value="<%=@adpost.title%>"><br>
+
+  <label for=""> description</label>
+  <input type = "text" name="description" value=
+  "<%=@adpost.description%>"><br>
+
+  <label for ="">main image url</label>
+  <input type = "url" name="image_url1" value="<%=@adpost.image_url1%>"><br>
+
+  <label for ="">model iphone</label><br>
+  <input type = "radio" name="model" value="<%=@adpost.model%>" checked><%=@adpost.model%><br>
+  <input type = "radio" name="model" value="X">X<br>
+  <input type = "radio" name="model" value="8">8<br>
+  <input type = "radio" name="model" value="8Plus">8Plus<br>
+  <input type = "radio" name="model" value="6">6<br>
+  <input type = "radio" name="model" value="6Plus">6Plus<br>
+
+
+  <label for ="">price</label>
+  <input type = "number" name="price" value="<%=@adpost.price%>"><br>
+
+  <label for ="">condition</label><br>
+<input type = "radio" name="condition" value="<%=@adpost.condition%>" checked><%=@adpost.condition%><br>
+
+  <input type = "radio" name="condition" value="New">New<br>
+  <input type = "radio" name="condition" value="Used" >Used<br>
+  <input type = "radio" name="condition" value="Damaged">Damaged<br>
+
+  </form>
+
+  

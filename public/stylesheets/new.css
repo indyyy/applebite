@@ -1,0 +1,36 @@
+ 
+input[type=text] {
+  background-color: #3cbc8d;
+  color: white;
+}
+
+input[type=url] {
+  background-color: #3cbc8d;
+  color: white;
+}
+
+input[type=number] {
+  background-color: #3cbc8d;
+  color: white;
+}
+
+input[type=radio] {
+  border: 0px;
+  height: 1em;
+}
+
+label {
+  font-size: 14px;
+  color: pink;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+form {
+  font-size: 12px;
+  color: white;
+}
+

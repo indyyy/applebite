@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>applebite</title>
+  <link rel='stylesheet' href='/stylesheets/adpost_detail.css'>
+</head>
+<body>
+
+  <%= "adpost detail stylesheet" %>
+
+  <h1> <%=@adpost.title%></h1>
+  <img src="<%= @adpost.image_url1 %>" height="100" width="100">
+<p>
+<ol>
+<li>ID <%=@adpost.id%></li>
+<li>USERID <%=@adpost.user_id%></li>
+<li>DESCRIPTION <%=@adpost.description%></li>
+<li>MODEL <%=@adpost.model%></li>
+<li>PRICE $<%=@adpost.price%></li>
+<li>CONDITION <%=@adpost.condition%></li>
+<li>ADPOST DATE <%=@adpost.post_date%></li>
+<li>ADPOST TIME <%=@adpost.post_time%></li>
+</ol>
+</p>
+
+
+<form action="/category/<%= @adpost.category+'/'+@adpost.id.to_s %>" method ="post">
+<input type ="hidden" name ="_method" value="delete">
+  <button>delete</button>
+  </form>
+
+<a href="/category/<%= @adpost.category+'/'+@adpost.id.to_s %>/edit">EDIT AD POST</a>
+
+  </body>
+</html>
+

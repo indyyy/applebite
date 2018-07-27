@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>applebite</title>
+  <link rel='stylesheet' href='/stylesheets/category.css'>
+</head>
+<body>
+
+  <%= "Category stylesheet" %>
+
+  <h1>Listing all the <%=@category%></h1>
+
+<a href=""> post new ad</a>
+
+<% @adposts.each do |adpost| %>
+<p>
+  <a href= "/category/<%= adpost.category+'/'+adpost.id.to_s%>">
+  <p><%= adpost.title %></p>
+  <img src="<%= adpost.image_url1 %>" height="50" width="50">
+  <p></p>
+</p>
+<% end %>
+
+</body>
+</html>

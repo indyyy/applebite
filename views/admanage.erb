@@ -1,0 +1,19 @@
+<body>
+
+  <%= "Admanage stylesheet" %>
+
+  <h1>Listing all the <%=current_user.last_name%></h1>
+<%=current_user.last_name%>
+<a href=""> post new ad</a>
+
+<% @adposts.each do |adpost| %>
+<p>
+  <a href= "/category/<%=adpost.category+'/'+adpost.id.to_s%>">
+  <p><%= adpost.title %></p>
+  <img src="<%= adpost.image_url1 %>" height="50" width="50">
+  <p></p>
+</p>
+<% end %>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+
+
+
+<img id="logo" src="/images/applebite_logo.jpg" height="50" width="50">
+<div class="navigation">
+<ul id="navmenu">
+<li><a href="/">Home</a></li>
+<% for i in 0..@category.count-1 do %>
+  <li><a href="/category/<%=@category[i].category%>"><%=@category[i].category%></a></li>
+<% end %>
+<li><a href="/category/other">other-categories</a></li>
+<li><a href="/login">Sign-In</a></li>
+<li><a href="/register">Register</a></li>
+<li><a href="/category/new">Post-Ad</a></li>
+<% if @user_adposts_flag %>
+  <li><a href="/admanage">Manage-My-Ads<a/></li>
+<% end %>
+</ul>
+</div>
+
+<h1>welcome to applebite</h1>
+<h5 id="subhead">Marketplace to Buy, Sell, or Lease loved Apple products</h5>
+
+<div class="top">FEATURED IPHONES <br>
+<ul>
+<% @adposts.each do |adpost| %>
+<li>
+  <a href= "/category/iPhone/<%= adpost.category+'/'
+  +adpost.id.to_s%>">
+  <img src="<%= adpost.image_url1 %>" height="100" width="100 ">
+  <h4><%= adpost.title %></h4>
+  <h3>$<%= adpost.price%></h3>
+</li>
+<% end %>
+</ul>
+</div>
+
+<form action="">
+<div class="middle">
+<input type="search" name="" placeholder="FUTURE AI CHATBOT COMING SOON--What can I help you with..." size="140">
+</div>
+</form>
+<div class="bottom"></div>
+
+
+
